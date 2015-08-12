@@ -14,29 +14,27 @@ function Controller () {
   function adicionar () {
     if(!vm.item.id){
       vm.item.id = id++;
-      vm.participantes.push( vm.item ); 
+      vm.participantes.push( vm.item );
     }
 
     vm.item = {}; // new Object();
   }
 
   function editar (item) {
-    copia = {
-      nome: item.nome,
-      pizza: item.pizza
-    };
+    copia = angular.copy(item);
 
     vm.item = item;
   }
 
   function cancelar () {
     angular.copy(copia, vm.item);
+    vm.item = {};
   }
 
   function excluir (item) {
     vm.participantes = vm.participantes.filter(function (batata) {
       return item != batata;
-    })
+    });
   }
 
 
