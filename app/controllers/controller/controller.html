@@ -24,8 +24,7 @@
 
 <div class="col-sm-6" style="margin-top: 10px">
   <input ng-model="filtro.nome" />
-  <input type="checkbox" ng-model="filtro.pizza" /> Pizza
-  <button class="btn btn-default" ng-if="filtro.pizza != null" ng-click="filtro.pizza = undefined">Todos</button>
+  <batata descricao="Pizza?" value="filtro.pizza"></batata>
 
   <table class="table table-striped table-hover table-border">
     <thead>
@@ -64,5 +63,16 @@
 
   <br />
 
-  <batata></batata>
+  <batata descricao="Feira?" value="vm.comBatata"></batata>
+  vm.comBatata = "{{vm.comBatata}}"
+
+    <br />
+    <br />
+  <nego nome="A">
+    nego a
+
+    <nego nome="B">
+      nego B
+    </nego>
+  </nego>
 </div>
