@@ -1,7 +1,7 @@
 angular.module('app.controller.ControllerController', [])
 .controller('ControllerController', Controller);
 
-function Controller (UserModel) {
+function Controller (UserModel, $http) {
   var vm = this;
   var id = 11;
   var copia;

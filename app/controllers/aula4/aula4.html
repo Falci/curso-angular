@@ -1,0 +1,31 @@
+<h1>Aula 4</h1>
+
+<button class="btn btn-default"
+        ng-click="vm.atualizar()">
+  Refresh</button>
+  <br />
+  <br />
+
+
+<input ng-model="vm.item.nome" placeholder="Nome" />
+<button class="btn btn-success"
+        ng-click="vm.salvar()">
+  Salvar</button>
+
+<br />
+<br />
+<b>Áreas:</b>
+<ul>
+  <li ng-repeat="item in vm.items">
+    Nome: {{item.nome}}<br />
+    ID: {{item.id}}
+    <button class="btn btn-danger"
+            ng-click="vm.excluir(item)">X</button>
+    <button class="btn btn-warning"
+            ng-click="vm.item = item"><i class="glyphicon glyphicon-pencil"></i></button>
+      <br /><br />
+  </li>
+</ul>
+<div>
+
+</div>

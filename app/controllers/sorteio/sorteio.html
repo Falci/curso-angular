@@ -1,0 +1,21 @@
+
+<h1>Sorteio</h1>
+<div class="col-sm-6"><img src="https://s3.amazonaws.com/uploads.hipchat.com/55862/1415300/Gw1Yxy6mBLZTUes/20150721_095544.jpg" width="500" class="thumnails"/></div>
+<div class="col-sm-6">
+  <button class="btn btn-success" ng-disabled="vm.sorteando" ng-click="vm.sortear()">Start</button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Chances</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-class="{'active': !item.pontos, 'success': item.vencedor}" ng-repeat="item in vm.items | orderBy:'nome'">
+        <td>{{item.nome}}</td>
+        <td>{{item.pontos}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
